@@ -1,6 +1,9 @@
 (function () {
     var takePicture = document.querySelector("#take-picture"),
-        showPicture = document.querySelector("#show-picture");
+        showPicture = document.querySelector("#show-picture"),
+        saveImage = document.querySelector("#save--image");
+
+
 
     if (takePicture && showPicture) {
         // Set events
@@ -20,10 +23,23 @@
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
 
-                    // Revoke ObjectURL after imagehas loaded
-                    showPicture.onload = function() {
-                        URL.revokeObjectURL(imgURL);  
+                    // Save the image to local gallery
+                    saveImage.onclick = function () {
+                        var gh = showPicture.src;
+                        var a = document.createElement('a');
+                        a.href = gh;
+                        a.download = 'image.png';
+
+                        a.click()
                     };
+                    
+                    
+
+                    // // Revoke ObjectURL after imagehas loaded
+                    // showPicture.onload = function () {
+                    //     URL.revokeObjectURL(imgURL);
+                    // };
+
                 }
                 catch (e) {
                     try {
@@ -43,6 +59,10 @@
                     }
                 }
             }
+
+
         };
     }
+
+
 })();
