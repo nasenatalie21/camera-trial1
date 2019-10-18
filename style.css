@@ -96,7 +96,7 @@ ul {
 /* Structure */
 
 .container {
-    width: 560px;
+    /* width: 560px;
     min-height: 500px;
     background: white;
     border: 1px solid #ccc;
@@ -108,15 +108,15 @@ ul {
     border-radius: 10px;
     -moz-box-shadow: 1px 1px 10px #000;
     -webkit-box-shadow: 1px 1px 5px #000;
-    box-shadow: 1px 1px 10px #000;
+    box-shadow: 1px 1px 10px #000; */
 }
 
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
     #container {
         width: 280px;
         padding: 10px;
     }
-}
+} */
 
 button {
     display: block;
